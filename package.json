@@ -12,6 +12,7 @@
     "vite": "^7.1.7"
   },
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "gsap": "^3.13.0"
   }
 }
