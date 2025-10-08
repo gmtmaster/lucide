@@ -1,13 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lucide</title>
+    <title>
+      Lucide Code Studio
+    </title>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="863f0ac4-8d4d-4475-9740-a3be952bb4e9"></script>
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="src/intro.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+  <section id="app">
+    <div class="loader">
+      <div class="overlay">
+        <div class="block"></div>
+        <div class="block"></div>
+      </div>
+
+      <div class="intro-logo">
+        <div class="word" id="word-1">
+          <h1><span>Lucide</span></h1>
+        </div>
+        <div class="word" id="word-2"><h1>Code</h1></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="spinner-container">
+        <div class="spinner"></div>
+      </div>
+
+      <div class="counter">
+        <div class="count">
+          <div class="digit"><h1>0</h1></div>
+          <div class="digit"><h1>0</h1></div>
+        </div>
+        <div class="count">
+          <div class="digit"><h1>2</h1></div>
+          <div class="digit"><h1>7</h1></div>
+        </div>
+        <div class="count">
+          <div class="digit"><h1>6</h1></div>
+          <div class="digit"><h1>5</h1></div>
+        </div>
+        <div class="count">
+          <div class="digit"><h1>9</h1></div>
+          <div class="digit"><h1>8</h1></div>
+        </div>
+        <div class="count">
+          <div class="digit"><h1>9</h1></div>
+          <div class="digit"><h1>9</h1></div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="container">
+        <img src="lucide-white.png" alt="Logo" class="hero-img" />
+        <h1>COMING SOON</h1>
+        <h2>Subscribe to get notified</h2>
+
+        <form id="subscribe-form">
+          <input type="text" id="name" name="name" placeholder="Név" required />
+          <input type="email" id="email" name="email" placeholder="Email címed" required />
+          <button type="submit">Feliratkozás</button>
+        </form>
+
+        <div class="footer">
+          <p>
+            <li><a href="https://github.com/gmtmaster">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/adamlekrinszki/">LinkedIn</a></li>
+
+            <li><a href="https://instagram.com/">Instagram</a></li>
+
+          </p>
+          <p class="footer-name">
+            <a href="https://adamlekrinszki.vercel.app/">by Adam Lekrinszki</a>
+          </p>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="module" src="src/script.js"></script>
   </body>
 </html>

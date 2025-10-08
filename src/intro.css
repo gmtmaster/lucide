@@ -1,0 +1,333 @@
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PP Neue Montreal", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+
+  background-color: #000;
+  background-image: url("/grad.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 300px;
+}
+
+
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h1 span {
+  font-family: "PP Editorial Old", "PP Neue Montreal";
+  font-weight: 500;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+p {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100svh;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none; /* ✅ allows clicks behind it */
+  z-index: -1;          /* move behind everything */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.block {
+  width: 100%;
+  height: 100%;
+  background: #303030;
+}
+
+.intro-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 0.25rem;
+}
+
+#word-1 {
+  position: relative;
+  left: -0.5rem;
+  padding-right: 0.25rem;
+}
+
+.word h1 {
+  font-size: 2.5rem;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center top;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.spinner-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 1.4px solid #fff;
+  border-top-color: rgba(255, 255, 255, 0.125);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.counter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.digit {
+  flex: 1;
+  padding-top: 1rem;
+}
+
+.count .digit h1 {
+  font-family: "PP Editorial Old", "PP Neue Montreal";
+  font-size: 15rem;
+  font-weight: 400;
+}
+
+.nav {
+  transform: translateY(-120%);
+}
+
+.cta {
+  transform: translateX(-50%) scale(0);
+}
+
+.cta-icon {
+  transform: scale(0);
+}
+
+.line,
+.cta-label,
+.word,
+.count .digit {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.line h1,
+.line p,
+.cta-label p,
+.count .digit h1 {
+  position: relative;
+  transform: translateY(120%);
+  will-change: transform;
+}
+
+#word-1 h1 {
+  transform: translateY(-120%);
+}
+
+#word-2 h1 {
+  transform: translateY(120%);
+}
+
+.block {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.divider {
+  transform: scaleY(0%);
+  will-change: transform;
+}
+
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .cta {
+    width: 90%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hero-img {
+
+  width: 400px;
+  border-radius: 50%;
+  margin-bottom: -120px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.container h1 {
+
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    color: #d1d1d1;
+
+}
+
+h2 {
+  font-weight: 400;
+  color: #d1d1d1;
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer p {
+  color: #d1d1d1;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.footer-name {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 12px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #d1d1d1;
+  font-size: 0.9rem;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 400px;
+}
+
+button {
+  background: linear-gradient(90deg, #ff3d3d, #e00000);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+#status {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
