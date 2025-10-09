@@ -20,12 +20,16 @@ body {
   overflow: hidden;
 
 
+  position: relative;
   background-color: #000;
   background-image: url("/grad.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 300px;
+  overflow: hidden;
+
 }
+
 
 
 
