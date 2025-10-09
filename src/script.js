@@ -163,3 +163,36 @@ document
 
         e.target.reset();
     });
+
+// Disable cursor on mobile
+if (window.matchMedia("(max-width: 768px)").matches) {
+    document.querySelectorAll(".cursor, .cursor-border").forEach(el => el.style.display = "none");
+} else {
+    const cursor = document.querySelector(".cursor");
+    const cursorBorder = document.querySelector(".cursor-border");
+
+    // Start off-screen
+    gsap.set([cursor, cursorBorder], { xPercent: -50, yPercent: -50 });
+
+    const xTo = gsap.quickTo(cursor, "x", { duration: 0.2, ease: "power3.out" });
+    const yTo = gsap.quickTo(cursor, "y", { duration: 0.2, ease: "power3.out" });
+
+    const xToBorder = gsap.quickTo(cursorBorder, "x", { duration: 0.5, ease: "power.out" });
+    const yToBorder = gsap.quickTo(cursorBorder, "y", { duration: 0.5, ease: "power3.out" });
+
+    window.addEventListener("mousemove", (e) => {
+        xTo(e.clientX);
+        yTo(e.clientY);
+        xToBorder(e.clientX);
+        yToBorder(e.clientY);
+    });
+
+    // Click animations
+    document.addEventListener("mousedown", () => {
+        gsap.to([cursor, cursorBorder], { scale: 0.6, duration: 0.2 });
+    });
+    document.addEventListener("mouseup", () => {
+        gsap.to([cursor, cursorBorder], { scale: 1, duration: 0.2 });
+    });
+}
+
