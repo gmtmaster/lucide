@@ -39,6 +39,7 @@ h1 {
   font-size: 5rem;
   font-weight: 500;
   line-height: 1;
+
 }
 
 h1 span {
@@ -254,7 +255,7 @@ p {
 
   width: 400px;
   border-radius: 50%;
-  margin-bottom: -120px;
+  margin-bottom: -100px;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 }
 
