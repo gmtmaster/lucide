@@ -365,3 +365,83 @@ body {
   border: 1px solid white;
   opacity: 0.5;
 }
+
+/* ────────────────────────────────
+   MOBILE RESPONSIVE
+──────────────────────────────── */
+@media (max-width: 768px) {
+  body {
+    background-position: center;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .container {
+    height: auto;
+    padding: 60px 20px;
+    justify-content: flex-start;
+  }
+
+  .hero-img {
+    width: 250px;
+    margin-bottom: 00px;
+  }
+
+  input {
+    font-size: 0.95rem;
+    padding: 10px;
+    width: 300px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .footer,
+  .footer-name {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 40px;
+  }
+
+  .footer-name {
+    margin-top: 10px;
+  }
+
+
+}
+
+/* ────────────────────────────────
+   SMALLER DEVICES
+──────────────────────────────── */
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  input,
+  button {
+    font-size: 0.9rem;
+  }
+
+  .hero-img {
+    width: 150px;
+  }
+}
